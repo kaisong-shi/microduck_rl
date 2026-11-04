@@ -256,6 +256,10 @@
               <joint axis="0 0 1" name="head_roll" type="hinge" range="-0.43633231299859127 0.4363323129985735" class="chosen_actuator"/>
               <joint axis="0 0 1" name="passive_head_roll_backlash" type="hinge" class="backlash"/>
               <inertial pos="0.00460523 0.00120047 -0.0324761" mass="0.188766" fullinertia="0.000320812 0.0002541 0.000149882 -6.32289e-07 6.57154e-06 4.18475e-06"/>
+              <!-- Equivalent 50 g head payload at the existing jaw_soft CoM. -->
+              <body name="head_extra_payload" pos="0.00460523 0.00120047 -0.0324761">
+                <inertial pos="0 0 0" mass="0.05" diaginertia="1e-5 1e-5 1e-5"/>
+              </body>
               <!-- Part lens -->
               <geom type="mesh" class="visual" pos="0.0155 -9.13778e-05 -0.05548" quat="0.5 -0.5 0.5 -0.5" mesh="lens" material="lens_material"/>
               <!-- Part face_part -->
